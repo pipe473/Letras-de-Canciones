@@ -16,7 +16,7 @@ useEffect(() => {
 
     const resultado = await axios(url);
 
-    console.log(resultado);
+    console.log(resultado.data.lyrics);
     
   }
   consultarApiLetra();
