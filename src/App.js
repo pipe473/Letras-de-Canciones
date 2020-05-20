@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import Formulario from './components/Formulario';
+import axios from 'axios';
 
 function App() {
 
@@ -10,7 +11,8 @@ useEffect(() => {
   if (Object.keys(busquedaletra).length === 0) return;
 
   const consultarApiLetra = async () => {
-    const url = `https://api.lyrics.ovh/v1/Metallica/Seek & Destroy`
+    const { artista, letra } = busquedaletra;
+    const url = `https://api.lyrics.ovh/v1/${artista}/${letra}`;
   }
   consultarApiLetra();
   
