@@ -29,6 +29,8 @@ const buscarInformacion = e => {
         guardarError(true);
         return;
     }
+    guardarError(false);
+    // Todo bien, pasar al componente principal
 }
 
     return ( 
