@@ -2,7 +2,7 @@ import React from 'react';
 
 const Info = ({info}) => {
 
-    if (Object.keys(info.length === 0)) return null;
+    if (Object.keys(info).length === 0 ) return null;
 
     return ( 
         <div className="card border-light">
