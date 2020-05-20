@@ -9,7 +9,7 @@ const [ busquedaletra, guardarBusquedaLetra ] = useState({});
   return (
     <Fragment>
       <Formulario 
-        guaradarBusquedaLetra={guardarBusquedaLetra}
+        guardarBusquedaLetra={guardarBusquedaLetra}
       />
     </Fragment>
   );
