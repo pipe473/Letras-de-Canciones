@@ -8,6 +8,7 @@ function App() {
 // Definir el state
 const [ busquedaletra, guardarBusquedaLetra ] = useState({});
 const [ letra, guardarLetra ] = useState('');
+const [ info, guardarInfo ] = useState({});
 
 useEffect(() => {
   if (Object.keys(busquedaletra).length === 0) return;
@@ -22,8 +23,8 @@ useEffect(() => {
       axios(url2)
     ]);
 
-    console.log(letra);
-    console.log(informacion);
+    guardarLetra(letra.data.lyrics);
+    guardarInfo(informacion.data.artist[0]);
     
     
 
