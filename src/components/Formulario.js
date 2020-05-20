@@ -36,7 +36,7 @@ const actualizarState = e => {
                                             name="artista"
                                             placeholder="Nombre Artista"
                                             onChange={actualizarState}
-                                            value="artista"
+                                            value={artista}
                                         />
                                 </div>
                             </div>
@@ -49,7 +49,7 @@ const actualizarState = e => {
                                             name="cancion"
                                             placeholder="Nombre Canción"
                                             onChange={actualizarState}
-                                            value="cancion"
+                                            value={cancion}
                                         />
                                 </div>
                                 </div>
