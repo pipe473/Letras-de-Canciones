@@ -34,11 +34,11 @@ const buscarInformacion = e => {
 }
 
     return ( 
-   <div className="bg-info">
-       <div className="container">
-           <div className="row">
-               { error ? <p className="alert alert-danger text-center p-2">Todos 
-               los campos son obligatorios</p> : null }
+   <div className="bg-info">     
+    { error ? <p className="alert alert-danger text-center p-2">Todos 
+                    los campos son obligatorios</p> : null }  
+       <div className="container">       
+           <div className="row">               
                <form
                 onSubmit={buscarInformacion}
                 className="col card text-white bg-transparent mb-5 pt-5 pb-2"
@@ -77,7 +77,7 @@ const buscarInformacion = e => {
                                 type="submit"
                                 className="btn btn-primary float-right"
                             >Buscar</button>
-                   </fieldset>
+                   </fieldset>                       
                </form>
            </div>
        </div>
