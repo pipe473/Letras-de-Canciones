@@ -11,8 +11,13 @@ useEffect(() => {
   if (Object.keys(busquedaletra).length === 0) return;
 
   const consultarApiLetra = async () => {
-    const { artista, letra } = busquedaletra;
-    const url = `https://api.lyrics.ovh/v1/${artista}/${letra}`;
+    const { artista, cancion } = busquedaletra;
+    const url = `https://api.lyrics.ovh/v1/${artista}/${cancion}`;
+
+    const resultado = await axios(url);
+
+    console.log(resultado);
+    
   }
   consultarApiLetra();
   
