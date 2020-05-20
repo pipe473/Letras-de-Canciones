@@ -9,7 +9,10 @@ const [ busquedaletra, guardarBusquedaLetra ] = useState({});
 useEffect(() => {
   if (Object.keys(busquedaletra).length === 0) return;
 
-  console.log('no se ejecuta');
+  const consultarApiLetra = async () => {
+    const url = `https://api.lyrics.ovh/v1/Metallica/Seek & Destroy`
+  }
+  consultarApiLetra();
   
 }, [busquedaletra]);
 
