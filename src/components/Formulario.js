@@ -23,7 +23,17 @@ const Formulario = () => {
                                     />
                                </div>
                            </div>
-                           <div className="col-md-6">2</div>
+                           <div className="col-md-6">
+                               <div className="form-group">
+                                   <label>Canción</label>
+                                   <input
+                                        type="text"
+                                        className="form-control"
+                                        name="cancion"
+                                        placeholder="Nombre Canción"
+                                    />
+                               </div>
+                               </div>
                        </div>
                    </fieldset>
 
