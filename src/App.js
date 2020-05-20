@@ -15,8 +15,10 @@ useEffect(() => {
   const consultarApiLetra = async () => {
     const { artista, cancion } = busquedaletra;
     const url = `https://api.lyrics.ovh/v1/${artista}/${cancion}`;
+    const url2 = `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${artista}`;
 
     const resultado = await axios(url);
+    const resultado2 = await axios(url2);
 
     guardarLetra(resultado.data.lyrics);
     
