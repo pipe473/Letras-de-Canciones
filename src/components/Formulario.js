@@ -7,6 +7,14 @@ const [busqueda, guardarBusqueda ] = useState({
     cancion: ''
 });
 
+// Función a cada input para leer contenido
+const actualizarState = e => {
+    guardarBusqueda({
+        ...busqueda,
+        [e.target.name] : e.target.value
+    })
+}
+
     return ( 
    <div className="bg-info">
        <div className="container">
@@ -25,6 +33,7 @@ const [busqueda, guardarBusqueda ] = useState({
                                             className="form-control"
                                             name="artista"
                                             placeholder="Nombre Artista"
+                                            actualizarState={actualizarState}
                                         />
                                 </div>
                             </div>
@@ -36,6 +45,7 @@ const [busqueda, guardarBusqueda ] = useState({
                                             className="form-control"
                                             name="cancion"
                                             placeholder="Nombre Canción"
+                                            actualizarState={actualizarState}
                                         />
                                 </div>
                                 </div>
