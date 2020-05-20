@@ -7,6 +7,9 @@ const [busqueda, guardarBusqueda ] = useState({
     cancion: ''
 });
 
+// State para Validacion
+const [ error, guardarError ] = useState(false);
+
 const { artista, cancion } = busqueda;
 
 // Función a cada input para leer contenido
@@ -17,11 +20,23 @@ const actualizarState = e => {
     })
 }
 
+// Consultar las APIS
+
+const buscarInformacion = e => {
+    e.preventDefault();
+
+    if (artista.trim() === '' || cancion.trim() === '') {
+        guardarError(true);
+        return;
+    }
+}
+
     return ( 
    <div className="bg-info">
        <div className="container">
            <div className="row">
                <form
+                onSubmit={buscarInformacion}
                 className="col card text-white bg-transparent mb-5 pt-5 pb-2"
                >
                    <fieldset>
