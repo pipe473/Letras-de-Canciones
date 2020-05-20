@@ -1,10 +1,16 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import Formulario from './components/Formulario';
 
 function App() {
+
+// Definir el state
+const [ busquedaletra, guardarBusquedaLetra ] = useState({});
+
   return (
     <Fragment>
-      <Formulario />
+      <Formulario 
+        guaradarBusquedaLetra={guardarBusquedaLetra}
+      />
     </Fragment>
   );
 }
