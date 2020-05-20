@@ -12,7 +12,17 @@ const Formulario = () => {
                        <legend className="text-center">Buscador Letras Canciones</legend>
 
                        <div className="row">
-                           <div className="col-md-6">1</div>
+                           <div className="col-md-6">
+                               <div className="form-group">
+                                   <label>Artista</label>
+                                   <input
+                                        type="text"
+                                        className="form-control"
+                                        name="artista"
+                                        placeholder="Nombre Artista"
+                                    />
+                               </div>
+                           </div>
                            <div className="col-md-6">2</div>
                        </div>
                    </fieldset>
