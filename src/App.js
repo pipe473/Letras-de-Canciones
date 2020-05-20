@@ -6,6 +6,7 @@ function App() {
 
 // Definir el state
 const [ busquedaletra, guardarBusquedaLetra ] = useState({});
+const [ letra, guardarLetra ] = useState('');
 
 useEffect(() => {
   if (Object.keys(busquedaletra).length === 0) return;
@@ -16,7 +17,7 @@ useEffect(() => {
 
     const resultado = await axios(url);
 
-    console.log(resultado.data.lyrics);
+    guardarLetra(resultado.data.lyrics);
     
   }
   consultarApiLetra();
