@@ -7,6 +7,8 @@ const [busqueda, guardarBusqueda ] = useState({
     cancion: ''
 });
 
+const { artista, cancion } = busqueda;
+
 // Función a cada input para leer contenido
 const actualizarState = e => {
     guardarBusqueda({
@@ -33,7 +35,8 @@ const actualizarState = e => {
                                             className="form-control"
                                             name="artista"
                                             placeholder="Nombre Artista"
-                                            actualizarState={actualizarState}
+                                            onChange={actualizarState}
+                                            value="artista"
                                         />
                                 </div>
                             </div>
@@ -45,7 +48,8 @@ const actualizarState = e => {
                                             className="form-control"
                                             name="cancion"
                                             placeholder="Nombre Canción"
-                                            actualizarState={actualizarState}
+                                            onChange={actualizarState}
+                                            value="cancion"
                                         />
                                 </div>
                                 </div>
